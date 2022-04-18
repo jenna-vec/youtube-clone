@@ -1,11 +1,144 @@
 
-a, p, input, h1, h2, h3, h4, h5, button {
+a, p, input, h1, h2, h3, h4, h5, button, small {
   font-family: "Roboto","Arial",sans-serif;
   text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 body {
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
+}
+
+.App {
+  width: 100vw;
+}
+
+button {
+  border: none;
+}
+
+svg {
+  pointer-events: none; 
+  display: block; 
+  width: 100%; 
+  height: 100%;
+}
+
+input {
+  border: none;
+  height: 29pt;
+  padding-left: 1em;
+}
+
+input::placeholder {
+  color: #a3a3a3;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Logo */
+.logo {
+  height: 20px;
+  width: 90px;
+  padding: 18px 14px 18px 16px;
+  color: var(--yt-spec-wordmark-text);
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+
+.logo-box {
+  display: block;
+  width: 80px;
+  padding-right: 1em;
+}
+
+
+/* Navbar */
+.MuiPaper-root {
+  background-color: white !important;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  border: 1pt #a3a3a3 solid;
+  min-height: 30pt;
+}
+
+.search-icon {
+  min-width: 40pt;
+  border-left: 1pt #a3a3a3 solid;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.history {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.5em;
+  width: 30vw;
+}
+
+
+/* Videos */
+.page {
+  width: fit-content;
+  margin: 8vh auto 8vh auto;
+}
+
+.video-results {
+  background-color: #f5f5f5; 
+  padding: 3em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 300px;
+  grid-gap: 1em;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 1em;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+/* YouTube Video Size responsive */
+@media screen 
+  and (min-width: 1024px) 
+  and (orientation: landscape) {
+    iframe {
+      width: 560px;
+      height: 315px;
+    }
+    .result {
+      width: 560px;
+    }
 }
