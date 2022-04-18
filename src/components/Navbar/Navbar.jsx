@@ -40,7 +40,7 @@ const Navbar = props => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ "width": "100%" }} >
+      <AppBar position="static">
         <Toolbar sx={{ "justifyContent": "space-between" }} >
           <div className='row'>
             <div className='logo-box'>
