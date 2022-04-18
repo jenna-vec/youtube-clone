@@ -10,7 +10,9 @@ Install Dependencies:
 Run Development Build:  
 ``npm start``  
   
-  
+**Required**  
+YouTube Data API key  
+
 **Instructions**  
 A text input for Youtube video IDs  
 A button that, when clicked, pulls that video id, and loads data from Youtube api  
